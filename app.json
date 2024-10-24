@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Financeiro",
-    "slug": "Financeiro",
+    "name": "app-financeiro",
+    "slug": "app-financeiro",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
