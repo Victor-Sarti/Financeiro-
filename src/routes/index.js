@@ -8,7 +8,7 @@ function Routes(){
   const signed = false;
 
   return(
-    signed ? <View>MOSTRAR</View> : <AuthRoutes/>
+    signed ? <View></View> : <AuthRoutes/>
   )
 }
 
