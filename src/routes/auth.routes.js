@@ -1,22 +1,35 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import pagina1 from '../paginas/pagina1';
-import pagina2 from '../paginas/pagina2';
+import Pagina1 from '../pages/Pagina1';
+import Pagina2 from '../pages/Pagina2';
 
 const AuthStack = createNativeStackNavigator();
 
 function AuthRoutes(){
   return(
     <AuthStack.Navigator>
-      <AuthStack.paginas
-        name="pagina1"
-        component={pagina1}
+      <AuthStack.Screen 
+        name="Pagina1"
+        component={Pagina1}
+        options={{
+          headerShown: false,
+        }}
       />
 
-      <AuthStack.paginas
-        name="pagina2"
-        component={pagina2}
+<AuthStack.Screen
+        name="Pagina2"
+        component={Pagina2}
+        options={{
+          headerStyle:{
+            backgroundColor: '#3b3dbf',
+            borderBottomWidth: 1,
+            borderBottomColor: '#00b94a'
+          },
+          headerTintColor: '#FFF',
+          headerTitle: 'Voltar',
+          headerBackTitleVisible: false,
+        }}
       />
     </AuthStack.Navigator>
   )
