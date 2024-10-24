@@ -1,10 +1,47 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Platform } from 'react-native';
 
-export default function SignUp(){
+import { 
+  Background, 
+  Container, 
+  AreaInput, 
+  Input, 
+  SubmitButton, 
+  SubmitText
+} from '../Pagina1/styles';
+
+export default function Pàgina2(){
   return(
-    <View>
-      <Text>TELA CADASTRO</Text>
-    </View>
+    <Background>
+      <Container
+        behavior={Platform.OS === 'ios' ? 'padding' : ''}
+        enabled
+      >
+
+        <AreaInput>
+          <Input
+            placeholder="Nome"
+          />
+        </AreaInput>
+
+        <AreaInput>
+          <Input
+            placeholder="Seu email"
+          />
+        </AreaInput>
+
+        <AreaInput>
+          <Input
+            placeholder="Sua senha"
+          />
+        </AreaInput>
+
+        <SubmitButton>
+          <SubmitText>Cadastrar</SubmitText>
+        </SubmitButton>
+
+      </Container>
+
+    </Background>
   )
 }
